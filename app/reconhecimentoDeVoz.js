@@ -4,7 +4,7 @@ window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;//got from mozilla
 
   const recognition = new SpeechRecognition();
-  recognition.lang='pt-Br';
+  //recognition.lang='pt-Br';
   recognition.start();
 
   recognition.addEventListener('result', onSpeach)

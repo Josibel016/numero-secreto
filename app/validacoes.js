@@ -5,7 +5,7 @@ function verificaSeOChutePossuiValorValido(chute) {
         if (chute.toUpperCase() === 'GAME OVER') {
             document.body.innerHTML = `
                 <h2> Game Over </h2>
-                <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
+                <button id="jogar-novamente" class="btn-jogar">play again</button>
             `;
             document.body.style.backgroundColor = "black";
         } else {
@@ -15,22 +15,22 @@ function verificaSeOChutePossuiValorValido(chute) {
     }
 
     if (numeroForMaiorQueOPermitido(numero)) {
-        elementoChute.innerHTML += `<div>valor inválido: o número precisa estar entre ${menorValor} e ${maiorValor}</div>`;
+        elementoChute.innerHTML += `<div>invalid value: the number must be between ${menorValor} e ${maiorValor}</div>`;
         return;
     }
 
     if (numero === numeroSecreto) {
         document.body.innerHTML = `
-            <h2> Você Acertou!!!</h2>
-            <h3> O número secreto era ${numeroSecreto}</h3> 
-            <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
+            <h2> You got it right!!!</h2>
+            <h3> the secrect number was ${numeroSecreto}</h3> 
+            <button id="jogar-novamente" class="btn-jogar">Play again</button>
         `;
     } else if (numero < numeroSecreto) {
         elementoChute.innerHTML += `
-            <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>`;
+            <div>The secret number is greater <i class="fa-solid fa-up-long"></i></div>`;
     } else {
         elementoChute.innerHTML += `
-            <div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>`;
+            <div>The secret number is lower <i class="fa-solid fa-down-long"></i></div>`;
     }
 }
 
