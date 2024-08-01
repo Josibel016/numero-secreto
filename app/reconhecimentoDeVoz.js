@@ -20,3 +20,5 @@ window.SpeechRecognition =
         <span class = "box">${chute}</span>
     `
   }
+
+  recognition.addEventListener('end',()=> recognition.start())
